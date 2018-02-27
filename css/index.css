@@ -716,7 +716,7 @@ div.skill p {
   border: 2px solid #00f;
   border-radius: 50%;
   cursor: pointer;
-  margin: 0 1rem;
+  margin: 0 .5rem;
 }
 
 .contactMe a {
