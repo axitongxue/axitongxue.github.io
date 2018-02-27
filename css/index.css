@@ -819,8 +819,8 @@ div.skill p {
 }
 
 @media only screen and (max-width: 415px) {
-  #canvas{
-    transform: scale(.6,.6);
+#canvas{
+    transform: scale(.6,.6) translateX(-25vw);
   }
   #section1 div.myIntro h1 {
     font-size: 28px;
