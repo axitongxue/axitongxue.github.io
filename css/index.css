@@ -474,6 +474,7 @@ div.skill p {
 /*
     section4
 */
+
 .wrap-box {
   position: relative;
   background: #dddddd;
@@ -812,9 +813,15 @@ div.skill p {
     height: auto;
     min-height: 100vh;
   }
+  #canvas{
+    transform: scale(.8,.8);
+  }
 }
 
 @media only screen and (max-width: 415px) {
+  #canvas{
+    transform: scale(.6,.6);
+  }
   #section1 div.myIntro h1 {
     font-size: 28px;
   }
