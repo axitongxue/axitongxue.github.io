@@ -95,40 +95,108 @@ $(function(){
 });
 
 $(function(){
-  var svgimg = document.getElementById("svg");
-  var params = {width: 600, height: 400, type:Two.Types.svg}
-  var two = new Two(params).appendTo(svgimg);
+  var canvas = document.getElementById("canvas");
+  var params = {width: 600, height: 400, type:Two.Types.canvas}
+  var two = new Two(params).appendTo(canvas);
   //画图
-  var circle = two.makeCircle(300, 200, 80);
-  circle.stroke = '#f88';
-  circle.fill = '#f00';
-  circle.opacity = 0.6;
-  circle.linewidth = 10;
-  circle.rotation = 60*Math.PI/180;
+  var circle = two.makeText('Skill', 300, 200);
+  circle.fill = '#fff';
+  circle.opacity = 0.8;
+  circle.size = 88;
 
-  var circle1 = two.makeCircle(150, 0, 25);
-  circle1.stroke = 'translation';
-  circle1.fill = '#666';
+  var circle1 = two.makeText('HTML/5',130, 75);
+  circle1.fill = '#0ff';
+  circle1.size = 18;
+  var circle3 = two.makeText('CSS/3',0, 150);
+  circle3.fill = '#aaf';
+  circle3.size = 22;
+  var circle5 = two.makeText('JS',-130, -75);
+  circle5.fill = '#ffa';
+  circle5.size = 22;
+  var circle7 = two.makeText('JQ',130, -75);
+  circle7.fill = '#faa';
+  circle7.size = 22;
+  var circle9 = two.makeText('VUE',-130, 75);
+  circle9.fill = '#aff';
+  circle9.size = 22;
+  var circle11 = two.makeText('Bootstrap',0, -150);
+  circle11.fill = '#faf';
+  circle11.size = 18;
 
 
-  var circle2 = two.makeCircle(-40, 0, 5);
+  var circle2 = two.makeCircle(-50, 0, 5);
   circle2.stroke = 'translation';
   circle2.fill = '#aaf';
+  var circle4 = two.makeCircle(-50, 0, 5);
+  circle4.stroke = 'translation';
+  circle4.fill = '#ffa';
+  var circle6 = two.makeCircle(-50, 0, 5);
+  circle6.stroke = 'translation';
+  circle6.fill = '#faa';
+  var circle8 = two.makeCircle(-50, 0, 5);
+  circle8.stroke = 'translation';
+  circle8.fill = '#aff';
+  var circle10 = two.makeCircle(-50, 0, 5);
+  circle10.stroke = 'translation';
+  circle10.fill = '#faf';
+  var circle12 = two.makeCircle(-50, 0, 5);
+  circle12.stroke = 'translation';
+  circle12.fill = '#0af';
 
   //绘图 动画
   var g2 = two.makeGroup(circle2);
-  g2.translation.x = 150;
-  g2.translation.y = 0;
+  g2.translation.x = 130;
+  g2.translation.y = 75;
+  var g4 = two.makeGroup(circle4);
+  g4.translation.x = 0;
+  g4.translation.y = 150;
+  var g6 = two.makeGroup(circle6);
+  g6.translation.x = -130;
+  g6.translation.y = -75;
+  var g8 = two.makeGroup(circle8);
+  g8.translation.x = 130;
+  g8.translation.y = -75;
+  var g10 = two.makeGroup(circle10);
+  g10.translation.x = -130;
+  g10.translation.y = 75;
+  var g12 = two.makeGroup(circle12);
+  g12.translation.x = 0;
+  g12.translation.y = -150;
 
   var g1 = two.makeGroup(circle1,g2);
   g1.translation.x = 300;
   g1.translation.y = 200;
+  var g3 = two.makeGroup(circle3,g4);
+  g3.translation.x = 300;
+  g3.translation.y = 200;
+  var g5 = two.makeGroup(circle5,g6);
+  g5.translation.x = 300;
+  g5.translation.y = 200;
+  var g7 = two.makeGroup(circle7,g8);
+  g7.translation.x = 300;
+  g7.translation.y = 200;
+  var g9 = two.makeGroup(circle9,g10);
+  g9.translation.x = 300;
+  g9.translation.y = 200;
+  var g11 = two.makeGroup(circle11,g12);
+  g11.translation.x = 300;
+  g11.translation.y = 200;
 
   var deg =0 ;
   two.on('update',function(){
-    deg += 2;
-    g2.rotation = deg*Math.PI/180;
+    deg += 1;
     g1.rotation = deg*Math.PI/180;
+    g2.rotation = deg*Math.PI/180;
+    g3.rotation = deg*Math.PI/180;
+    g4.rotation = deg*Math.PI/180;
+    g5.rotation = deg*Math.PI/180;
+    g6.rotation = deg*Math.PI/180;
+    g7.rotation = deg*Math.PI/180;
+    g8.rotation = deg*Math.PI/180;
+    g9.rotation = deg*Math.PI/180;
+    g10.rotation = deg*Math.PI/180;
+    g11.rotation = deg*Math.PI/180;
+    g12.rotation = deg*Math.PI/180;
   })
   two.play();
 });
